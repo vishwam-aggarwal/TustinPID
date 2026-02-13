@@ -1,4 +1,4 @@
-#include "PID.h"
+#include "TustinPID.h"
 #include "math.h"
 
 /*OPEN SERIAL PLOTTER TO SEE OUTPUT */
@@ -19,7 +19,7 @@
 
 
 ******************************************/
-PID myPID;
+TustinPID myPID;
 
 float delayInput = 0; //Plant delayed input value
 float delayOutput = 0; //Plant delayed output value
