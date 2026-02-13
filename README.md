@@ -38,8 +38,11 @@ Documents/Arduino/libraries/TustinPID
 ```ini
 lib_deps =
     https://github.com/vishwam-aggarwal/TustinPID
+```
 
 Quick Start Example
+
+```cpp
 
 #include <TustinPID.h>
 
@@ -67,22 +70,30 @@ void loop() {
     applyActuator(u);
 }
 
+```
 API Overview
 
 Initialization
 
+```cpp
 void setup(float Kp, float Ki, float Kd, float tau, float Ts);
+
+```
 
 Compute control output
 
+```cpp
 float getControl(float error, float uMin, float uMax);
 float getControl(float error);   // no saturation
+```
 
 State management
 
+```cpp
 void reset();
 void setStates(float integrator, float derivative);
 float getI() const;   // actual integrator contribution
+```
 
 How It Works
 
