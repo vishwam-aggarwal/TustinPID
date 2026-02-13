@@ -95,15 +95,15 @@ void setStates(float integrator, float derivative);
 float getI() const;   // actual integrator contribution
 ```
 
-How It Works
+##How It Works
 
-Integrator (I‑term)
+###Integrator (I‑term)
 
 Tustin (trapezoidal) rule:
 
 [ I[k] = I[k-1] + \frac{Ki \cdot Ts}{2}(e[k] + e[k-1]) ]
 
-Derivative (D‑term)
+###Derivative (D‑term)
 
 Filtered differentiator:
 
@@ -113,7 +113,7 @@ where:
 
 [ a = \frac{2\tau - Ts}{2\tau + Ts}, \quad b = \frac{2Kd}{2\tau + Ts} ]
 
-Anti‑Windup (Integrator Freeze)
+##Anti‑Windup (Integrator Freeze)
 
 When the output saturates:
 
